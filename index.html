@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Google Books Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="app/css/style.css"/>
+</head>
+<body>
+  <script src="app/js/apikey.js"></script>
+  <script src="app/js/es5/index.js"></script>
+
+<header class="header">
+  <h1>Google Books Search</h1>
+</header>
+<section>
+  <div class="container">
+    <div class= "searchbar">
+      <form class="searchbar__form" id="js-searchform">
+        <div class="searchbar__radio">
+          <div class="searchbar__radioRow"><label for="author" aria-label="Search by author"><input required type="radio" name="searchParam" data-queryparam="+inauthor:" value="author" id="author"><span>Search by author</span></label></div>
+          <div class="searchbar__radioRow"><label for="title" aria-label="Search by title"><input type="radio" name="searchParam" data-queryparam="+intitle:" value="title" id="title"><span>Search by title</span></label></div>
+          <div class="searchbar__radioRow"><label for="everywhere" aria-label="Search everywhere"><input type="radio" name="searchParam" data-queryparam="" value="everywhere" id="everywhere"><span>Search everywhere</span></label></div>
+        </div>
+        <div class="searchbar__inputRow">
+          <input aria-label="Enter your query" required id="js-searchinput" class="searchbar__input" type="text" placeholder="Enter your query"/>
+          <i class="material-icons searchbar__icon">search</i>
+        </div>
+        <input type="submit" role="button" value="Submit your query" aria-label="Submit your query" class="searchbar__button searchbar__button--disabled"/>
+      </form>
+      <button class="searchbar__button searchbar__button--hidden" id="js-clearbtn" name="Clear form">Clear form</button>
+      <div id="js-preloader" class="preloader preloader--hidden"><div></div><div></div><div></div><div></div></div> 
+      <ul class="result" id="js-searchresults"></ul>
+    </div>
+</div>
+</section>
+ <footer class="footer">
+  <p>Powered by Google Books API</p>
+  </footer>
+</body>
+</html>
+
